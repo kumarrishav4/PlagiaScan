@@ -1,0 +1,7 @@
+"The quick brown"
+"quick brown fox"
+"brown fox jumps"
+"fox jumps over"
+"jumps over the"
+"over the lazy"
+"the lazy dog"
