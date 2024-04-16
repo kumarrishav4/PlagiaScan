@@ -13,28 +13,35 @@ def calculate_similarity(text1, text2, algorithm='sequence_matcher'):
     if algorithm == 'sequence_matcher':
         matcher = SequenceMatcher(None, text1, text2)
         return matcher.ratio() * 100
+    
     elif algorithm == 'document_fingerprint':
         fingerprint1 = hash_document(text1)
         fingerprint2 = hash_document(text2)
         intersection = len(fingerprint1 & fingerprint2)
         union = len(fingerprint1 | fingerprint2)
         return (intersection / union) * 100
+    
     elif algorithm == 'token_based_similarity':
         tokens1 = tokenize_code(text1)
         tokens2 = tokenize_code(text2)
         return calculate_token_similarity(tokens1, tokens2)
+    
     elif algorithm == 'ast_comparison':
         ast1 = generate_ast(text1)
         ast2 = generate_ast(text2)
         return calculate_ast_similarity(ast1, ast2)
+    
     elif algorithm == 'function_mapping':
         return calculate_function_similarity(text1, text2)
+    
     elif algorithm == 'clone_detection':
         return calculate_clone_similarity(text1, text2)
+    
     elif algorithm == 'shingling':
         shingles1 = generate_shingles(text1)
         shingles2 = generate_shingles(text2)
         return calculate_shingle_similarity(shingles1, shingles2)
+    
     elif algorithm == 'semantic_analysis':
         return calculate_semantic_similarity(text1, text2)
 
