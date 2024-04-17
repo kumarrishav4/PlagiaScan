@@ -48,6 +48,3 @@ To install PlagiaScan, follow these steps:
 ## Contact
 
 For any inquiries or support, please contact [Kumar Rishav](ikumarishav@gmail.com).
-```
-
-You can copy and paste this Markdown content into your `README.md` file for your PlagiaScan project. Adjust any placeholders and customize it according to your project's needs.
